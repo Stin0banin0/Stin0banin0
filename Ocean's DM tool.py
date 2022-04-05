@@ -28,23 +28,25 @@ def rollDice(dice):
                 value=value+random.randint(1,dice[i][1])
     return value
 
-def oneReward(rewardName,reward):
-    print("")
 #if 'hp' in rewards:
 #    if isinstance(rewards[hp],int):
 #        rewardList
 
-def combineStats(stats):
-    print("Yro'ue")
+
 
 def lvlRewards(level):
     rewards=levelRewards[level]
     rewardList={}
     rewardList['tokens']=tokens[level]
 
+def combineStats(stats):
+    print("Yr'oue")
+
 def lvlUp(lowLevel,highLevel,rollTokens=False):
     for i in range(lowLevel+1,highLevel+1):
         lvlRewards(i)
+    
+    if rollTokens==True:
+        rollTokens 
 
 print("lvlUp(<lowLevel>,<highLevel>) allows you to roll random lvlUp rewards for that set of levels. rollDice() uses a list to roll dice automatically.")
-
