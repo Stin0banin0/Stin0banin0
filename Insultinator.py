@@ -52,4 +52,3 @@ def ins2():
 def ins3():
     global insult
     insult=("Mi vi ");
-    
