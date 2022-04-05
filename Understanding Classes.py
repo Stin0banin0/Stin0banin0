@@ -1,5 +1,7 @@
 import random
 
+logToggle=True
+
 def log(data):
     if logToggle==True:
         print(data)
