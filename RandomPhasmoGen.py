@@ -16,3 +16,4 @@ def singleRoll():
     category=input("Categories are: Light, Evidence, Safety, Other, All.  ")
     return(random.choice(items[category]))
 
+print("Your mother")
