@@ -1,6 +1,6 @@
 import random
 
-levelRewards={0:{},1:{},2:{'hp':[6]}}
+levelRewards={0:{},1:{},2:{'hp':[6]},3:{[]}}
 tokens=[0,0,1,1,1,2,2,2,2,2,3,3,3,3,3,4,4,4,4,4,5,5]
 stats=['hp','mana','damage']
 standardDice={4:[4],6:[6],8:[8],10:[0,9],12:[12],20:[20],100:[0,90,10]}
@@ -32,21 +32,35 @@ def rollDice(dice):
 #    if isinstance(rewards[hp],int):
 #        rewardList
 
-
-
 def lvlRewards(level):
     rewards=levelRewards[level]
     rewardList={}
     rewardList['tokens']=tokens[level]
 
 def combineStats(stats):
-    print("Yr'oue")
+    lib1=stats[0]
+    lib2=stats[1]
+    libEnd={}
+    statPossibilities=['hp','mp','strength','intelligence','constitution','wisdom','dexterity','charisma']
+    for i in range(len(statPossibilities)):
+        lvlStat=statPossibilities[i]
+        if lvlStat in lib1 and lvlStat in lib2:
+            libEnd[statPossibilities]=lib1[lvlStat]+lib2[lvlStat]
+        elif lvlStat in lib1:
+            libEnd[lvlStat]=lib1[lvlStat]
+        elif lvlStat in lib2:
+            libEnd[lvlStat]=lib2[lvlStat]
+    return libEnd 
+
+def rollToken(amount):
+    print("This rolls for the given amount of tokens")
 
 def lvlUp(lowLevel,highLevel,rollTokens=False):
     for i in range(lowLevel+1,highLevel+1):
-        lvlRewards(i)
+        combineStats()
     
     if rollTokens==True:
-        rollTokens 
+        rewards="dummy"
+        rollTokens(rewards['tokens'])
 
 print("lvlUp(<lowLevel>,<highLevel>) allows you to roll random lvlUp rewards for that set of levels. rollDice() uses a list to roll dice automatically.")
