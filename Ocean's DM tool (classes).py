@@ -34,6 +34,29 @@ class LvlUp:
         rewards=self.levelRewards[level]
         rewardList={}
         rewardList['tokens']=self.tokens[level]
+    
+    def combineStats(self,stats):
+        lib1=stats[0]
+        lib2=stats[1]
+        libEnd={}
+        #stats
+        for i in range(len(self.statPossibilities)):
+            lvlStat=self.statPossibilities[i]
+            if lvlStat in lib1 and lvlStat in lib2:
+                libEnd[self.statPossibilities]=lib1[lvlStat]+lib2[lvlStat]
+            elif lvlStat in lib1:
+                libEnd[lvlStat]=lib1[lvlStat]
+            elif lvlStat in lib2:
+                libEnd[lvlStat]=lib2[lvlStat]
+        return libEnd 
+    
+    def lvlUp(self,lowLevel,highLevel,rollTokens=False):
+        for i in range(lowLevel+1,highLevel+1):
+            self.combineStats()
+        
+        if rollTokens==True:
+            rewards="dummy"
+            rollTokens(rewards['tokens'])
 
 def getLevelRewards():
     return LvlUp.levelRewards
@@ -47,39 +70,8 @@ def getStats():
 def getStandardDice():
     return LvlUp.standardDice
 
-
-
 #if 'hp' in rewards:
 #    if isinstance(rewards[hp],int):
 #        rewardList
 
-
-
-def combineStats(stats):
-    lib1=stats[0]
-    lib2=stats[1]
-    libEnd={}
-    #stats
-    for i in range(len(statPossibilities)):
-        lvlStat=statPossibilities[i]
-        if lvlStat in lib1 and lvlStat in lib2:
-            libEnd[statPossibilities]=lib1[lvlStat]+lib2[lvlStat]
-        elif lvlStat in lib1:
-            libEnd[lvlStat]=lib1[lvlStat]
-        elif lvlStat in lib2:
-            libEnd[lvlStat]=lib2[lvlStat]
-    return libEnd 
-
-def rollToken(amount):
-    print("This rolls for the given amount of tokens")
-
-def lvlUp(lowLevel,highLevel,rollTokens=False):
-    for i in range(lowLevel+1,highLevel+1):
-        combineStats()
-    
-    if rollTokens==True:
-        rewards="dummy"
-        rollTokens(rewards['tokens'])
-
 print("lvlUp(<lowLevel>,<highLevel>) allows you to roll random lvlUp rewards for that set of levels. rollDice() uses a list to roll dice automatically.")
-
