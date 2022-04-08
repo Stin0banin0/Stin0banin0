@@ -53,10 +53,13 @@ class LvlUp:
     def lvlUp(self,lowLevel,highLevel,rollTokens=False):
         for i in range(lowLevel+1,highLevel+1):
             self.combineStats()
-    
+        
         if rollTokens==True:
             rewards="dummy"
             rollTokens(rewards['tokens'])
+    
+    def rollToken(amount):
+        print("This rolls for the given amount of tokens")
 
 def getLevelRewards():
     return LvlUp.levelRewards
@@ -70,14 +73,9 @@ def getStats():
 def getStandardDice():
     return LvlUp.standardDice
 
-
-
 #if 'hp' in rewards:
 #    if isinstance(rewards[hp],int):
 #        rewardList
-
-def rollToken(amount):
-    print("This rolls for the given amount of tokens")
 
 print("lvlUp(<lowLevel>,<highLevel>) allows you to roll random lvlUp rewards for that set of levels. rollDice() uses a list to roll dice automatically.")
 
