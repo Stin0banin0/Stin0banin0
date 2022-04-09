@@ -12,7 +12,3 @@ add=[['happy','happily']]
 def randName():
     rand=random.randint(0,1)
     #return(name[rand][random.randint(0,(len(name[ran]-1)))])
-
-def capitalise(string):
-  character=string[0]
-  return character.upper()+string[1:]
