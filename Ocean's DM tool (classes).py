@@ -31,7 +31,7 @@ class LvlUp:
                 else:
                     value=value+random.randint(1,dice[i][1])
         return value
-    
+
     def rollTokens(amount):
         rewards={}
         while amount>0:
@@ -70,4 +70,10 @@ def getStandardDice():
 
 lvlUp=LvlUp()
 
-print("lvlUp(<lowLevel>,<highLevel>) allows you to roll random lvlUp rewards for that set of levels. rollDice() uses a list to roll dice automatically.")
+while 1==1:
+    answer=input("Choose: ROLL: roll a ")
+
+do
+{
+    a=input("")
+}while not a=="Yo mama":
