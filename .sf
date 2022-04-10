@@ -1,0 +1,24 @@
+#Saffran is the name of a programming language I wanna come up with and hopefully once make. The file extension would be .sf if available. It's largely based off of Python and a few other languages I've seen such as C++/C#, Smalltalk, Java, and Minecraft commands;
+
+#Sf uses the print() ;
+print('')
+
+#;
+
+#String statements in Sf are as follows:
+
+a in b #True if the list/lib/tuple/... or if string a contains string b in one piece
+
+#Number statements in Sf are as follows:
+
+a==b #True if a is equal to b;
+a>b #True if a is larger than b, equal to b<a;
+a>=b #True if a is equal to or larger than b, equal to b=<a;
+!{a==b} #True unless a is equal to b;
+{}
+
+after {\statement/}: {
+    \commands/
+}while {\statement/}: {
+    \commands/
+}
