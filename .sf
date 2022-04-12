@@ -17,6 +17,12 @@ a>=b #True if a is equal to or larger than b, equal to b=<a;
 !{a==b} #True unless a is equal to b;
 {}
 
+#Verbal operators:
+
+a y b #True if a and b are both True
+a o b #True if at least a or b is True
+no a #True if a is False
+
 after {\statement/}: {
     \commands/
 }while {\statement/}: {
