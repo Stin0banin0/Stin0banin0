@@ -14,8 +14,8 @@ a in b #True if the list/lib/tuple/... or if string a contains string b in one p
 a==b #True if a is equal to b;
 a>b #True if a is larger than b, equal to b<a;
 a>=b #True if a is equal to or larger than b, equal to b=<a;
-!{a==b} #True unless a is equal to b;
-{}
+!(a==b) #True unless a is equal to b;
+()
 
 #In Sf variables you can define variables as other variables:
 a=5
@@ -28,6 +28,11 @@ b    #b=3
 a=4
 b    #b=3
 #The := defines the value of b as the value of a, while the = refers b to a, and thus b will refer to a for its value when you ask for it
+
+#Verbal operators:
+a y b #True if a and b are both True
+a o b #True if at least a or b is True
+no a #True if a is False
 
 #Sf imitates the do while function in C++
 after {\statement/}: {
