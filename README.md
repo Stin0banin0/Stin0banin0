@@ -1,5 +1,5 @@
 - 👋 Hi, I’m @Stin0banin0
-- 👀 I’m interested in things
+- 👀 I’m interested in being a gay furry
 - 🌱 I’m currently learning how to do things
 - 💞️ I’m looking to collaborate on nothing...
 - 📫 How to reach me: throw far
